@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="TesteCapta.Views.SelecionarMoedaPage"
+    BackgroundColor="LightGray">
+    <StackLayout
+        Margin="10"
+        Padding="10"
+        Spacing="20"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand"
+        BackgroundColor="White"
+        HeightRequest="500"
+        WidthRequest="300"
+        Orientation="Vertical">
+        <Label 
+            Style="{ DynamicResource SimpleTextStyle }"
+            Text="Selecione abaixo a moeda que deseja salvar no seu dispositivo:"/>
+        <ListView
+            x:Name="MoedasListView"
+            BackgroundColor="Transparent"
+            ItemsSource="{Binding MoedasCollection}"
+            HasUnevenRows="true"
+            SeparatorVisibility="Default"
+            SeparatorColor="Silver"
+            ItemSelected="MoedasListView_ItemSelected"
+            SelectedItem="{Binding MoedaSelecionada}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                                Padding="0,10,0,10">
+                            <Label Text="{Binding Simbolo, StringFormat='Código: {0}'}"/>
+                            <Label Text="{Binding NomeFormatado, StringFormat='Moeda: {0}'}"/>
+                            <Label Text="{Binding TipoMoeda, StringFormat='Tipo: {0}'}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button
+            Text="Gravar moeda"
+            Command="{Binding SaveCommand}"/>
+    </StackLayout>
+</popup:PopupPage>

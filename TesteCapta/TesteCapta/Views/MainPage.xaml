@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TesteCapta.Views.MainPage"
+    Padding="10,20,10,10"
+    Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout
+          VerticalOptions="FillAndExpand"
+          HorizontalOptions="FillAndExpand"
+          Orientation="Vertical"
+          Spacing="10">
+            <Label 
+                Style="{ DynamicResource LabelTitleStyle }"
+                Text="TESTE - PROGRAMADOR XAMARIN"/>
+            <Label 
+                Style="{ DynamicResource SimpleTextStyle }"
+                Text="Clique em 'Obter moedas' para carregar a lista de moedas disponíveis para utilização e armazenar no seu dispositivo. Para excluir uma moeda, basta selecioná-la na lista de moedas salvas e clicar em 'Excluir Moeda'."/>            
+            <StackLayout 
+                Margin="0,20,0,0"
+                Orientation="Horizontal"                         
+                HorizontalOptions="FillAndExpand">
+                <Entry
+                    x:Name="EntryCodigo"
+                    Placeholder="Digite o código da moeda..."
+                    HorizontalOptions="StartAndExpand"
+                    TextChanged="EntryCodigo_TextChanged"
+                    Text="{Binding TxtCodigo, Mode=TwoWay}"/>
+                <Button
+                    Text="OK"
+                    HorizontalOptions="End"
+                    Command="{Binding SearchCommand}"/>
+            </StackLayout>
+            <ListView
+                x:Name="MoedasBdListView"
+                BackgroundColor="Transparent"
+                ItemsSource="{Binding MoedasBdCollection}"
+                HasUnevenRows="true"
+                SeparatorVisibility="Default"
+                SeparatorColor="Silver"
+                ItemSelected="MoedasBdListView_ItemSelected"
+                SelectedItem="{Binding MoedaSelecionada}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout
+                                Padding="0,10,0,10">
+                                <Label Text="{Binding Simbolo, StringFormat='Código: {0}'}"/>
+                                <Label Text="{Binding NomeFormatado, StringFormat='Moeda: {0}'}"/>
+                                <Label Text="{Binding TipoMoeda, StringFormat='Tipo: {0}'}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <FlexLayout
+                Direction="Row">
+                <Button
+                    Text="Obter moeda"
+                    Style="{StaticResource PrimaryButton}"
+                    FlexLayout.Grow="1"
+                    Command="{Binding OpenPopUpCommand}"
+                    Margin="0,0,2,0"/>
+                <Button
+                    Text="Excluir moeda"
+                    Style="{StaticResource PrimaryButton}"
+                    FlexLayout.Grow="1"
+                    Command="{Binding DeleteCommand}"
+                    Margin="2,0,0,0"/>
+            </FlexLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

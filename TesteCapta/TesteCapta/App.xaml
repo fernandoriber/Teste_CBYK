@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
+             x:Class="TesteCapta.App">
+	<Application.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="MainColor">#1087C0</Color>
+            <Color x:Key="DarkColor">Black</Color>
+            <Color x:Key="DarkTextColor">Black</Color>
+            <Color x:Key="LabelButtonColor">#ffffff</Color>
+            <Color x:Key="ThemeBackgroundDetailColor">#F0F0F0</Color>
+            
+            <Style x:Key="PrimaryButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource MainColor}" />
+                <Setter Property="TextColor" Value="{StaticResource LabelButtonColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="CornerRadius" Value="20" />
+            </Style>
+
+            <Style x:Key="LabelTitleStyle" TargetType="Label" >
+                <Setter Property="FontSize" Value="{OnPlatform Android=20, iOS=20}"/>
+                <Setter Property="TextColor" Value="Blue" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="SimpleTextStyle" TargetType="Label" >
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
+        </ResourceDictionary>
+	</Application.Resources>
+</prism:PrismApplication>
