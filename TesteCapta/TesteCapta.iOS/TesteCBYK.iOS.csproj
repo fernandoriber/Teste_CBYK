@@ -214,9 +214,9 @@
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TesteCapta\TesteCapta.csproj">
-      <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
-      <Name>TesteCapta</Name>
+    <ProjectReference Include="..\TesteCapta\TesteCBYK.csproj">
+      <Project>{3A109A7C-79BE-4C0C-9C73-656515640A8A}</Project>
+      <Name>TesteCBYK</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

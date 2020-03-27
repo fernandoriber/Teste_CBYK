@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteCapta", "TesteCapta\TesteCapta.csproj", "{3A109A7C-79BE-4C0C-9C73-656515640A8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteCBYK", "TesteCapta\TesteCBYK.csproj", "{3A109A7C-79BE-4C0C-9C73-656515640A8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteCapta.Android", "TesteCapta.Android\TesteCapta.Android.csproj", "{5030C23E-70B6-4326-AE4E-B40DE61B31D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteCBYK.Android", "TesteCapta.Android\TesteCBYK.Android.csproj", "{5030C23E-70B6-4326-AE4E-B40DE61B31D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteCapta.iOS", "TesteCapta.iOS\TesteCapta.iOS.csproj", "{C37B8F8D-ED2B-4AE7-9077-D602B27004DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteCBYK.iOS", "TesteCapta.iOS\TesteCBYK.iOS.csproj", "{C37B8F8D-ED2B-4AE7-9077-D602B27004DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

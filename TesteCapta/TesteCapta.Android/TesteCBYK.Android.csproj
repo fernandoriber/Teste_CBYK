@@ -9,8 +9,8 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TesteCapta.Droid</RootNamespace>
-    <AssemblyName>TesteCapta.Android</AssemblyName>
+    <RootNamespace>TesteCBYK.Droid</RootNamespace>
+    <AssemblyName>TesteCBYK.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
@@ -36,6 +36,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -112,9 +116,9 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TesteCapta\TesteCapta.csproj">
-      <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
-      <Name>TesteCapta</Name>
+    <ProjectReference Include="..\TesteCapta\TesteCBYK.csproj">
+      <Project>{3A109A7C-79BE-4C0C-9C73-656515640A8A}</Project>
+      <Name>TesteCBYK</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
